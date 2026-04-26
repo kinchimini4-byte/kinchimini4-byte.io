@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: '8bitoperator', "Comic Sans MS", cursive;
+    background-color: black;
+    color: white;
+    animation: fadeIn 0.8s ease-out;
+}
+
+header {
+    background: linear-gradient(90deg, #000, #1a1aff, #6600cc);
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 50px;
+    color: #00ffcc;
+    text-shadow: 0 0 10px blue, 0 0 20px purple;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu a {
+    font-size: 35px;
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: purple;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+.izquierda, .derecha {
+    background-color: #0a0a0a;
+    padding: 15px;
+}
+
+.centro {
+    background-color: #111;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personaje {
+    max-width: 250px;
+    margin: 20px auto;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.personaje:nth-child(1) { animation-delay: 0.6s; }
+.personaje:nth-child(2) { animation-delay: 0.4s; }
+.personaje:nth-child(3) { animation-delay: 0.6s; }
+.personaje:nth-child(4) { animation-delay: 0.8s; }
+
+.personaje img {
+    width: 100%;
+    max-width: 200px;
+    border: 2px solid #00ffcc;
+}
+
+.centro img {
+    width: 100%;
+    max-width: 500px;
+    border: 5px solid blue;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
